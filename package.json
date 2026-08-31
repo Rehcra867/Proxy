@@ -1,0 +1,20 @@
+{
+  "name": "kiwi-proxy",
+  "version": "1.0.0",
+  "description": "Kiwi Ultraviolet Proxy",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@mercuryworkshop/bare-mux": "^2.1.8",
+    "@mercuryworkshop/epoxy-transport": "^2.1.28",
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.10",
+    "express": "^4.21.0",
+    "wisp-server-node": "^1.1.7",
+    "ws": "^8.19.0"
+  }
+}

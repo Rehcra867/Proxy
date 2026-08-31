@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: kiwi-proxy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/index.js
