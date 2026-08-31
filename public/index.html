@@ -116,9 +116,14 @@
     var btnFwd = document.getElementById('btn-fwd');
     var hist = [], hIdx = -1, swReady = false;
 
+    var connection = new BareMux.BareMuxConnection("/baremux/worker.js");
+
     async function registerSW() {
       try {
-        await BareMux.setTransport("/epoxy/");
+        var wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/";
+        if ((await connection.getTransport()) !== "/epoxy/index.mjs") {
+          await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
+        }
         var reg = await navigator.serviceWorker.register("/uv/sw.js", { scope: __uv$config.prefix });
         await new Promise(function (resolve) {
           if (reg.active) return resolve();
