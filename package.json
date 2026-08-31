@@ -1,0 +1,17 @@
+{
+  "name": "kiwi-proxy",
+  "version": "1.0.0",
+  "description": "Kiwi Ultraviolet Proxy for Render",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "@titaniumnetwork-dev/ultraviolet": "^1.0.8",
+    "node-static": "^0.7.11"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
