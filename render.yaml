@@ -4,4 +4,4 @@ services:
     runtime: node
     plan: free
     buildCommand: npm install
-    startCommand: node src/index.js
+    startCommand: node index.js
